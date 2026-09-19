@@ -3,3 +3,6 @@
 __pycache__/
 Thumbs.db
 desktop.ini
+
+# 内部メモ（GitHubには上げない）
+MEMO.md
