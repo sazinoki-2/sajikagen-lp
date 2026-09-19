@@ -2370,6 +2370,14 @@
 
 /* スマホ下部の固定ボタン */
 .sticky-cta .btn-fill{background:var(--grad);color:var(--btn-ink)}
+
+/* ===== 5品の並べ方：big をつけた1枚を大きく、残り4枚を2×2 ===== */
+.dish-card{margin:0}   /* figure の標準余白（左右40px）を消す */
+.dishes .dish-card.big{grid-column:span 2}
+@media (min-width:760px){
+  .dishes{grid-template-columns:repeat(4,1fr)}
+  .dishes .dish-card.big{grid-column:span 2;grid-row:span 2}
+}
 </style>
 </head>
 
@@ -3070,12 +3078,16 @@
       <div class="wrap center">
         <div class="rv">
           <p class="eyebrow">Menu<span class="ja">つくるもの</span></p>
-          <h2 class="h2">ある日の、6品。</h2>
+          <h2 class="h2">ある日の、5品。</h2>
           <p class="lead">3時間でこのくらい。保存容器に詰めて、冷蔵庫に並べて帰ります。</p>
         </div>
       </div>
       <div class="wrap">
         <div class="dishes rv rv-d1">
+          <figure class="dish-card big">
+            <img src="assets/img/m-nikomi.jpg" alt="チキンと野菜のスパイス煮込み" loading="lazy" width="900" height="900">
+            <figcaption>チキンと野菜のスパイス煮込み<span>主菜</span></figcaption>
+          </figure>
           <figure class="dish-card">
             <img src="assets/img/own-saladbar.jpg" alt="オレンジ、セロリ、枝豆、ルッコラ、ミニトマトの小鉢" loading="lazy" width="900" height="900">
             <figcaption>サラダバー<span>副菜</span></figcaption>
@@ -3087,14 +3099,6 @@
           <figure class="dish-card">
             <img src="assets/img/m-karaage.jpg" alt="鶏の唐揚げ、揚げポテト添え" loading="lazy" width="900" height="900">
             <figcaption>鶏の唐揚げ<span>主菜</span></figcaption>
-          </figure>
-          <figure class="dish-card">
-            <img src="assets/img/m-nikomi.jpg" alt="チキンと野菜のスパイス煮込み" loading="lazy" width="900" height="900">
-            <figcaption>チキンと野菜のスパイス煮込み<span>主菜</span></figcaption>
-          </figure>
-          <figure class="dish-card">
-            <img src="assets/img/own-imochips.jpg" alt="薄切りのサツマイモを揚げたチップス" loading="lazy" width="900" height="900">
-            <figcaption>無添加100%サツマイモチップス<span>おやつ</span></figcaption>
           </figure>
           <figure class="dish-card">
             <img src="assets/img/own-pilaf.jpg" alt="エビと野菜のピラフ" loading="lazy" width="900" height="900">
