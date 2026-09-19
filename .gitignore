@@ -1,0 +1,5 @@
+# 編集画面が保存時に残す直前の版
+*.bak
+__pycache__/
+Thumbs.db
+desktop.ini
